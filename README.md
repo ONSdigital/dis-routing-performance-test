@@ -4,6 +4,12 @@ Performance Tests for Routing Investigation POCs
 
 ## Getting started
 
+The service consists of a handle that can handle any and all requests that are used in the performance tests (`handleanythingserver`, port 30001)
+
+```shell
+go run main.go
+```
+
 ### Dependencies
 
 ### Configuration
