@@ -28,4 +28,5 @@ func HandleAny(w http.ResponseWriter, req *http.Request) {
 	}
 	w.Header().Set("x-upstream", "true")
 	w.WriteHeader(http.StatusOK)
+	w.Write([]byte("Hello there. You have reached the server that handles any requests from upstream services!"))
 }

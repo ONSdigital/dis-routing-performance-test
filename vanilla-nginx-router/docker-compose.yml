@@ -1,0 +1,28 @@
+name: vanilla-nginx-router-poc
+services:
+  router:
+    build: .
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx/.conf:ro
+      - ./nginx/routes.conf:/etc/nginx/conf.d/routes.conf
+      - ./nginx/redirects.conf:/etc/nginx/conf.d/redirects.conf
+    ports:
+      - '8080:80'
+  upstream-go-server:
+    build: ..
+    ports:
+      - 30001:30001
+  http-echo-server-1:
+    extends:
+      file: ../manifests/http-echo.yml
+      service: http-echo
+    command: [ "-text", "request has been proxied to http-echo-server-1" ]
+    ports:
+      - 15678:5678
+  http-echo-server-2:
+    extends:
+      file: ../manifests/http-echo.yml
+      service: http-echo
+    command: [ "-text", "request has been proxied to http-echo-server-2" ]
+    ports:
+      - 15679:5678

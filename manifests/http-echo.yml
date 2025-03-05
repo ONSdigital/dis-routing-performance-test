@@ -1,0 +1,4 @@
+services:
+  http-echo:
+    platform: linux/amd64
+    image: hashicorp/http-echo:alpine
