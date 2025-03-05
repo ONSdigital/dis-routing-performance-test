@@ -8,10 +8,6 @@ services:
       - ./nginx/redirects.conf:/etc/nginx/conf.d/redirects.conf
     ports:
       - '8080:80'
-  upstream-go-server:
-    build: ..
-    ports:
-      - 30001:30001
   http-echo-server-1:
     extends:
       file: ../manifests/http-echo.yml
