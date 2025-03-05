@@ -62,56 +62,57 @@ make debug
 The following routes and redirects have been created, in the feature/performance-testing-routes branch of the Frontend Router, and can be added to other routers for similar tests:
 
 #### Routes
-http://localhost:20000/
-http://localhost:20000/beans
-http://localhost:20000/means
-http://localhost:20000/heinz
 
-http://localhost:20000/beans0
+- http://localhost:20000/
+- http://localhost:20000/beans
+- http://localhost:20000/means
+- http://localhost:20000/heinz
+
+- http://localhost:20000/beans0
 http://localhost:20000/beans1
 ...
 http://localhost:20000/beans999
 
-http://localhost:20000/*anything*/beans
-http://localhost:20000/*anything*/means
-http://localhost:20000/*anything*/heinz
+- http://localhost:20000/*anything*/beans
+- http://localhost:20000/*anything*/means
+- http://localhost:20000/*anything*/heinz
 
-http://localhost:20000/*anything*/beans0
+- http://localhost:20000/*anything*/beans0
 http://localhost:20000/*anything*/beans1
 ...
 http://localhost:20000/*anything*/beans999
 
-http://localhost:20000/beans/*anything*
-http://localhost:20000/means/*anything*
-http://localhost:20000/heinz/*anything*
+- http://localhost:20000/beans/*anything*
+- http://localhost:20000/means/*anything*
+- http://localhost:20000/heinz/*anything*
 
-http://localhost:20000/beans0/*anything*
+- http://localhost:20000/beans0/*anything*
 http://localhost:20000/beans1/*anything*
 ...
 http://localhost:20000/beans999/*anything*
 
 #### Redirects
-http://localhost:20000/cola redirects to http://localhost:20000/beans
-http://localhost:20000/capri-sun redirects to http://localhost:20000/beans
-http://localhost:20000/choc%20pudding redirects to http://localhost:20000/beans
-http://localhost:20000/cola0 redirects to http://localhost:20000/beans
-http://localhost:20000/cola1 redirects to http://localhost:20000/beans
+- http://localhost:20000/cola redirects to http://localhost:20000/beans
+- http://localhost:20000/capri-sun redirects to http://localhost:20000/beans
+- http://localhost:20000/choc%20pudding redirects to http://localhost:20000/beans
+- http://localhost:20000/cola0 redirects to http://localhost:20000/beans
+- http://localhost:20000/cola1 redirects to http://localhost:20000/beans
 ...
 http://localhost:20000/cola999 redirects to http://localhost:20000/beans
 
-http://localhost:20000/*anything*/cola redirects to http://localhost:20000/means
-http://localhost:20000/*anything*/capri-sun redirects to http://localhost:20000/means
-http://localhost:20000/*anything*/choc%20pudding redirects to http://localhost:20000/means
-http://localhost:20000/*anything*/cola0 redirects to http://localhost:20000/means
-http://localhost:20000/*anything*/cola1 redirects to http://localhost:20000/means
+- http://localhost:20000/*anything*/cola redirects to http://localhost:20000/means
+- http://localhost:20000/*anything*/capri-sun redirects to http://localhost:20000/means
+- http://localhost:20000/*anything*/choc%20pudding redirects to http://localhost:20000/means
+- http://localhost:20000/*anything*/cola0 redirects to http://localhost:20000/means
+- http://localhost:20000/*anything*/cola1 redirects to http://localhost:20000/means
 ...
 http://localhost:20000/*anything*/cola999 redirects to http://localhost:20000/means
 
-http://localhost:20000/cola/*anything* redirects to http://localhost:20000/heinz
-http://localhost:20000/capri-sun/*anything* redirects to http://localhost:20000/heinz
-http://localhost:20000/choc%20pudding/*anything* redirects to http://localhost:20000/heinz
-http://localhost:20000/cola0/*anything* redirects to http://localhost:20000/heinz
-http://localhost:20000/cola1/*anything* redirects to http://localhost:20000/heinz
+- http://localhost:20000/cola/*anything* redirects to http://localhost:20000/heinz
+- http://localhost:20000/capri-sun/*anything* redirects to http://localhost:20000/heinz
+- http://localhost:20000/choc%20pudding/*anything* redirects to http://localhost:20000/heinz
+- http://localhost:20000/cola0/*anything* redirects to http://localhost:20000/heinz
+- http://localhost:20000/cola1/*anything* redirects to http://localhost:20000/heinz
 ...
 http://localhost:20000/cola999/*anything* redirects to http://localhost:20000/heinz
 
