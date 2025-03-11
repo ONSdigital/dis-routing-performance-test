@@ -65,7 +65,35 @@ git checkout feature/performance-testing-routes
 make debug
 ```
 
-Next make sure that you have installed JMeter - see [Dependencies](#dependencies)
+To check that the Frontend Router is running just try any of the paths listed at the top of this readme e.g. http://localhost:20000/beans
+
+Next, to run the jmeter tests, see [Running JMeter Tests](#running-jmeter-tests)
+
+
+### Testing with the Vanilla NginX Server and Echo Server
+
+Firstly make sure that colima is running - see [Dependencies](#dependencies)
+
+Then, move into the dis-routing-performance-test/vanilla-nginx-router directory and start the containers as follows:
+
+```shell
+make up
+```
+
+To check that the echo server is running just go to any path on port 15678 e.g. http://localhost:15678/anythinghere
+
+Then this message should be returned:
+
+request has been proxied to http-echo-server-1
+
+To check that the NginX server is running just try any of the paths listed at the top of this readme e.g. http://localhost:8080/beans
+
+Next, to run the jmeter tests, see [Running JMeter Tests](#running-jmeter-tests)
+
+
+### Running JMeter Tests
+
+Make sure that you have installed JMeter - see [Dependencies](#dependencies)
 
 Then, to run any of the existing test plans, which are all in the jmeter-test-files directory, run a jmeter command that follows this format:
 
@@ -82,6 +110,12 @@ https://github.com/ONSdigital/dp-operations/blob/main/guides/performance-testing
 
 ### Dependencies
 
+Before running any of the test plans you will need to install jmeter e.g. using brew:
+
+```shell
+brew install jmeter
+```
+
 Services that the Frontend Router depends on:
 
 - zebedee
@@ -96,10 +130,10 @@ cd dp-api-router
 make debug
 ```
 
-Before running any of the test plans you will need to install jmeter e.g. using brew:
+Before running the NginX or Echo Server docker containers you will need to start Colima:
 
 ```shell
-brew install jmeter
+colima start
 ```
 
 ## Contributing
