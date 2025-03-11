@@ -56,9 +56,7 @@ Then this message should be returned:
 
 Next run the services that the Frontend Router depends on - see [Dependencies](#dependencies)
 
-Next run the Frontend Router itself:
-
-- the frontend router (port 20000):
+Next run the Frontend Router itself (on port 20000):
 ```shell
 cd dp-frontend-router
 git checkout feature/performance-testing-routes
@@ -66,9 +64,9 @@ make debug
 ```
 
 To check that the Frontend Router is running just try any of the paths listed at the top of this readme e.g. http://localhost:20000/beans
+If all is well then you should receive the same message coming back from the 'Handle Anything' Server.
 
 Next, to run the jmeter tests, see [Running JMeter Tests](#running-jmeter-tests)
-
 
 ### Testing with the Vanilla NginX Server and Echo Server
 
@@ -87,9 +85,15 @@ Then this message should be returned:
 request has been proxied to http-echo-server-1
 
 To check that the NginX server is running just try any of the paths listed at the top of this readme e.g. http://localhost:8080/beans
+If all is well then you should receive the same message coming back from the Echo Server.
 
 Next, to run the jmeter tests, see [Running JMeter Tests](#running-jmeter-tests)
 
+Finally, when you have finished, stop the docker containers as follows:
+
+```shell
+make clean
+```
 
 ### Running JMeter Tests
 
