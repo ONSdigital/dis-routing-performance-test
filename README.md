@@ -54,7 +54,7 @@ Then this message should be returned:
 
 "Hello there. You have reached the server that handles any requests from upstream services!"
 
-Next run the services that the Frontend Router depends on - see [Dependencies](Dependencies)
+Next run the services that the Frontend Router depends on - see [Dependencies](#dependencies)
 
 Next run the Frontend Router itself:
 
@@ -65,7 +65,7 @@ git checkout feature/performance-testing-routes
 make debug
 ```
 
-Next make sure that you have installed JMeter - see [Dependencies](Dependencies)
+Next make sure that you have installed JMeter - see [Dependencies](#dependencies)
 
 Then, to run any of the existing test plans, which are all in the jmeter-test-files directory, run a jmeter command that follows this format:
 
