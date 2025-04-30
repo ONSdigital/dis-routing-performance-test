@@ -1,5 +1,11 @@
 # dis-routing-performance-test
 
+---
+
+:warning: This repository was archived in May 2025 and is no longer in development. :warning:
+
+---
+
 Performance Tests for Routing Investigation POCs
 
 This repository contains the things that are required for running jmeter test scripts against either of the following:
